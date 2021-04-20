@@ -39,7 +39,7 @@ Shader "Custom/Effects/Blur"
                 return o;
             }
 
-            fixed4 blur(sampler2D img, fixed2 uvv, float2 resolution, float2 direction){ 
+            fixed4 blur(sampler2D img, fixed2 uvv, half2 resolution, half2 direction){ 
                 fixed4 color = fixed4(0.0, 0.0, 0.0, 0.0);
                 half2 off1 = half2(1.3333333333333333, 1.3333333333333333)* direction;
                 color += tex2D(img, uvv).rgba* 0.29411764705882354;
